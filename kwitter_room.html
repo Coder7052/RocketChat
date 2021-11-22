@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Kwitter Room</title>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+	<div class="container">
+		<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="Logout()">Logout</button>
+		<center>
+			<h1 class="header">
+				RocketChat
+				<br>
+				<br>
+				<sup>
+
+					<img id="image1" src="logo.gif">
+					<br>
+				</sup>
+
+			</h1>
+			<h3 id="user_name" class="color_white"></h3>
+			<div class="form-group input_div_room_page">
+				<label style=" font-size:20px;background-color: transparent;font-weight:bold; color:deeppink;">Create a Room:</label>
+				<br>
+				<input type="text" id="room_name" placeholder="Room Name" class="form-control" 
+				style="background-color:transparent; font-weight:bold; color:cyan">
+			</div>
+			<button class="btn btn-success" onclick="AddRoom()">#Add Room</button>
+			<br>
+			<label style=" font-size:20px;background-color: transparent;font-weight:bold; color:deeppink;">Or join a room:</label>
+			<h3 class="color_white">TRENDING ROOMS</h3>
+			<div id="output" style="background-color: transparent; font-weight:bold; color:white;"></div>
+
+		</center>
+	</div>
+	<script src="kwitter_room.js"></script>
+</body>
+
+</html>
